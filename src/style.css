@@ -1,0 +1,166 @@
+/*
+//
+// HOW TO:
+//
+// Setup map, icons, sidebar
+// 
+*/
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html,
+#map {
+  width: 100%;
+  height: 100%;
+  outline: 5px dotted green;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+/*
+//
+// Some icon classes
+//
+// .leaflet-marker-icon: for every marker
+// .active-icon: active marker
+// .big-icon: for cluster group
+// other: different church types
+// 
+*/
+
+.leaflet-marker-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0px 0px 2px #00ffff;
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+
+
+.active-icon {
+  border: 3px solid blue;
+}
+
+.big-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.5) url(./icons/church_big.png);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+
+.church-icon-one {
+  width: 20px;
+  height: 20px;
+  background: rgba(0,255,0,0.5) url(./icons/church_big.png);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.church-icon-two {
+  width: 20px;
+  height: 20px;
+  background: rgba(255,0,0,0.5) url(./icons/church_big.png);
+  background-position: 50% 50%;
+  background-size: cover;
+
+}
+
+.church-icon-three {
+  width: 20px;
+  height: 20px;
+  background: rgba(0,0,255,5) url(./icons/church_big.png);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+
+/*
+//
+// Some sidebar classes
+// 
+*/
+
+
+.sidebar {
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  overflow: hidden;
+  height: 100%;
+  transform: translateX(calc(-100% - 20px));
+  box-shadow: 0px 0px 22px -11px rgba(66, 68, 90, 1);
+  border-radius: 0px 0px 50px 0px
+
+}
+
+.active-sidebar .sidebar {
+  width: 100%;
+  transform: translateX(0);
+}
+
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  padding: 0;
+  border-radius: 3px;
+  z-index: 1;
+  background: none;
+}
+
+.sidebar .close-button svg {
+  fill: black;
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar-content {
+  height: inherit;
+  text-align: center;
+}
+
+.sidebar-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar-header {
+  font-size: 2em;
+  padding: 5px 15px 15px;
+}
+
+.sidebar-description {
+  font-size: 1.2em;
+}
