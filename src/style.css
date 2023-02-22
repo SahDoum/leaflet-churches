@@ -65,7 +65,7 @@ body {
 .big-icon {
   width: 40px;
   height: 40px;
-  background: rgba(255,255,255,0.5) url(./icons/church_big.png);
+  background: rgba(255,255,255,0.5) url(./img/church.png);
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -74,7 +74,7 @@ body {
 .church-icon-one {
   width: 20px;
   height: 20px;
-  background: rgba(0,255,0,0.5) url(./icons/church_big.png);
+  background: rgba(0,255,0,0.5) url(./img/church.png);
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -82,7 +82,7 @@ body {
 .church-icon-two {
   width: 20px;
   height: 20px;
-  background: rgba(255,0,0,0.5) url(./icons/church_big.png);
+  background: rgba(255,0,0,0.5) url(./img/church.png);
   background-position: 50% 50%;
   background-size: cover;
 
@@ -91,7 +91,7 @@ body {
 .church-icon-three {
   width: 20px;
   height: 20px;
-  background: rgba(0,0,255,5) url(./icons/church_big.png);
+  background: rgba(0,0,255,5) url(./img/church.png);
   background-position: 50% 50%;
   background-size: cover;
 }

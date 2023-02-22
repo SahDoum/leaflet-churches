@@ -106,10 +106,6 @@ class churchMap {
     this._map.addLayer(markers);
   }
 
-  _markerClickZoom(e) {
-    this._map.setView(e.target.getLatLng(), this.churchZoom);
-  }
-
   showSidebarWidthText(id) {
     const church = this._churches[id];
 
@@ -117,7 +113,7 @@ class churchMap {
 
     const sidebarTemplate = `
         <div class="sidebar-content">
-          <img class="sidebar-img" src="./src/destroyed.jpeg">
+          <img class="sidebar-img" src="./src/img/destroyed.jpeg">
           <div class="sidebar-header">${church.name}</div>
           <div class="sidebar-description">${church.desc}</div>
         </div>
