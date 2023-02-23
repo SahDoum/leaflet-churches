@@ -43,6 +43,8 @@ body {
 // .big-icon: for cluster group
 // other: different church types
 // 
+// outline style shoul be !importatn
+//
 */
 
 .leaflet-marker-icon {
@@ -58,13 +60,20 @@ body {
 }
 
 
-.active-icon {
-  border: 3px solid blue;
+body .active-icon {
+  width: 60px;
+  height: 60px;
+  left: -30px;
+  top: -30px;
+
+  outline: 4px solid blue !important;
 }
 
 .big-icon {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
+  left: -40px;
+  top: -40px;
   background: rgba(255,255,255,0.5) url(./img/church.png);
   background-position: 50% 50%;
   background-size: cover;
@@ -72,16 +81,22 @@ body {
 
 
 .church-icon-one {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  left: -20px;
+  top: -20px;
+
   background: rgba(0,255,0,0.5) url(./img/church.png);
   background-position: 50% 50%;
   background-size: cover;
 }
 
 .church-icon-two {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  left: -20px;
+  top: -20px;
+
   background: rgba(255,0,0,0.5) url(./img/church.png);
   background-position: 50% 50%;
   background-size: cover;
@@ -89,9 +104,12 @@ body {
 }
 
 .church-icon-three {
-  width: 20px;
-  height: 20px;
-  background: rgba(0,0,255,5) url(./img/church.png);
+  width: 40px;
+  height: 40px;
+  left: -20px;
+  top: -20px;
+
+  background: rgba(0,0,255,0.5) url(./img/church.png);
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -157,8 +175,8 @@ body {
 }
 
 .sidebar-header {
-  font-size: 2em;
-  padding: 5px 15px 15px;
+  font-size: 1.8em;
+  padding: 20px 15px 15px;
 }
 
 .sidebar-description {

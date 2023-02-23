@@ -25,7 +25,7 @@ var _icons = {
 
 
 class churchMap {
-  churchZoom = 10;
+  churchZoom = 8;
 
   constructor(churchArray) {
     this._churches = churchArray;
@@ -74,6 +74,20 @@ class churchMap {
       spiderfyOnMaxZoom: false,
       showCoverageOnHover: false,
 
+      animate: true,
+
+      // don't cluster on zoom
+      maxClusterRadius: function (mapZoom) {
+        if (mapZoom > 14) {
+            return 5;
+        } else {
+            return 80;
+        }
+      },
+      disableClusteringAtZoom: 15, 
+      zoomToBoundsOnClick: true,
+      animateAddingMarkers: true,
+
       // you can rewrite this function for proper cluster icon
       iconCreateFunction: function(cluster) {
           return _icons["big"];
@@ -94,8 +108,13 @@ class churchMap {
     // show sidebar on click
     markers.on("click", function (e) {
       if (e.layer instanceof L.Marker) {
+
+        // zoom to church
         const newZoom = Math.max(this.churchZoom, this._map.getZoom());
         this._map.setView(e.layer.getLatLng(), newZoom);
+
+        // deactivate previously activated icon
+        this._deactivateIcon();
         e.layer._icon.classList.add('active-icon');
         this.showSidebarWidthText(e.layer.options["marker-options-id"]);
       }
@@ -131,8 +150,10 @@ class churchMap {
 
   closeSidebar() {
     document.body.classList.remove("active-sidebar");
+    this._deactivateIcon();
+  }
 
-    // deactivate icon
+  _deactivateIcon() {
     var activeIcon = document.querySelector(".active-icon");
 
     if (activeIcon) {
