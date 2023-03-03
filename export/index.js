@@ -1,41 +1,20 @@
-import * as L1 from 'leaflet';
-import { Icon } from 'leaflet';
-import 'leaflet.markercluster/dist/leaflet.markercluster';
+// import * as L1 from 'leaflet';
+// import { Icon } from 'leaflet';
+// import 'leaflet.markercluster/dist/leaflet.markercluster';
 
-import "leaflet-plugins/layer/tile/Yandex";
-import "leaflet-plugins/layer/tile/Yandex.addon.LoadApi";
-import "leaflet-plugins/layer/tile/Yandex.addon.Controls";
+// import "leaflet-plugins/layer/tile/Yandex";
+// import "leaflet-plugins/layer/tile/Yandex.addon.LoadApi";
+// import "leaflet-plugins/layer/tile/Yandex.addon.Controls";
 
 
 
+// //
+// // HOW TO SETUP:
+// //
+// // _icons: descibe all the icons on the map
+// // iconCreateFunction: create cluster icon. Rewrite it to show what inside of cluser
+// // sidebarTemplate: template of sidebar 
 //
-// HOW TO SETUP:
-//
-// _icons: descibe all the icons on the map
-// iconCreateFunction: create cluster icon. Rewrite it to show what inside of cluser
-// sidebarTemplate: template of sidebar 
-//
-
-// it's icon experiment
-// var _icons = {
-//   // icon for marker cluster group
-//   big:   new L.divIcon({className: 'big-icon location-pin', iconSize: null, html: 
-//     '<img src="./src/img/church.png">\
-//     <div class=\'pin\'></div>'
-//   }),
-//   type1: new L.divIcon({className: 'church-icon-one location-pin small-icon', iconSize: null, html: 
-//     '<img src="./src/img/church.png">\
-//     <div class=\'pin\'></div>'
-//   }),
-//   type2: new L.divIcon({className: 'church-icon-two location-pin small-icon', iconSize: null, html: 
-//     '<img src="./src/img/church.png">\
-//     <div class=\'pin\'></div>'
-//   }),
-//   type3: new L.divIcon({className: 'church-icon-three location-pin small-icon', iconSize: null, html: 
-//     '<img src="./src/img/church.png">\
-//     <div class=\'pin\'></div>'
-//   }),
-// };
 
 
 var _icons = {
@@ -137,7 +116,7 @@ class churchMap {
 
     const sidebarTemplate = `
         <div class="sidebar-content">
-          <img class="sidebar-img" src="./src/img/destroyed.jpeg">
+          <img class="sidebar-img" src="./img/destroyed.jpeg">
           <div class="sidebar-header">${church.name}</div>
           <div class="sidebar-description">${church.desc}</div>
         </div>
