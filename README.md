@@ -27,6 +27,8 @@ index.html, index.js. style.css -- основные файлы
 libs/ -- внешние библиотеки и стили
 img/ -- картинки
 
+В wordpress подключение описано в папке export/wordpress-files
+
 # webpack
 
 Можно все развернуть и через webpack

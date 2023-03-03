@@ -73,6 +73,8 @@ class churchMap {
     // create marker cluster group
     let markers = L.markerClusterGroup({
       showCoverageOnHover: false,
+      maxClusterRadius: 10,
+      zoomToBoundsOnClick: false,
       iconCreateFunction: function(cluster) {
           return _icons["big"];
       }
@@ -88,6 +90,11 @@ class churchMap {
         });
       markers.addLayer(marker);
     });
+
+    markers.on('clusterclick', function (a) {
+      var bounds = a.layer.getBounds().pad(0.5);
+      this._map.fitBounds(bounds);
+    }.bind(this));
 
     // show sidebar on click
     markers.on("click", function (e) {
