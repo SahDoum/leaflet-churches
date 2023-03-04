@@ -3,13 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Leaflet Yandex Map Example</title>
-    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="./node_modules/leaflet.markercluster/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="./node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="./libs/leaflet.css" />
+    <link rel="stylesheet" href="./libs/MarkerCluster.css" />
+    <link rel="stylesheet" href="./libs/MarkerCluster.Default.css" />
 
-    <link rel="stylesheet" href="./src/style.css" />
+
+    <script type="text/javascript" src="libs/leaflet.js"></script>
+    <script type="text/javascript" src="libs/leaflet.markercluster.js"></script>
+    <script type="text/javascript" src="libs/Yandex.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d5895d88-22c8-4529-9946-ca9197c37b12&lang=en_US" type="text/javascript">     
+    </script>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="./index.js"></script>
+
+
   </head>
-
   <body>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -20,20 +30,19 @@
       </symbol>
     </svg>
 
-    <div class="sidebar">
-      <button aria-label="close sidebar" type="button" class="close-button">
-        <svg>
-          <use xlink:href="#icon-clear" />
-        </svg>      
-      </button>
+    <div id="map-container">
+      <div class="sidebar">
+        <button aria-label="close sidebar" type="button" class="close-button">
+          <svg>
+            <use xlink:href="#icon-clear" />
+          </svg>      
+        </button>
+      </div>
+      <div id="map"></div>
     </div>
-    <div id="map"></div>
 
 
     <!-- HOW TO: 1) use your API key. 2) Use initMap for churches init -->
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=d5895d88-22c8-4529-9946-ca9197c37b12&lang=en_US" type="text/javascript"> 
-    </script>
-    <script type="text/javascript" src="dist/main.js"></script>
 
     <script type="text/javascript">
       var map = initMap([
