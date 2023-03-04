@@ -4,44 +4,18 @@
 
 # Стороннее использование
 
-Чтобы вставить в свой проект, скопируйте папку export:
-
-```
-├── export
-│   ├── img
-│   │   ├── church.png
-│   │   └── destroyed.jpeg
-│   ├── index.html
-│   ├── index.js
-│   ├── libs
-│   │   ├── MarkerCluster.Default.css
-│   │   ├── MarkerCluster.css
-│   │   ├── Yandex.js
-│   │   ├── leaflet.css
-│   │   ├── leaflet.js
-│   │   └── leaflet.markercluster.js
-│   └── style.css
-```
+Чтобы вставить в свой проект, скопируйте гит:
 
 index.html, index.js. style.css -- основные файлы
 libs/ -- внешние библиотеки и стили
 img/ -- картинки
 
-В wordpress подключение описано в папке export/wordpress-files
-
-# webpack
-
-Можно все развернуть и через webpack
-
-```
-npm init
-npm run watch    
-```
+В wordpress подключение описано в папке wordpress-files 
+Конечно, template-parts.map.php может разойтись с index.html
+ 
 
 # ToDo
 
 Не очень понятно, какие лучшие практики использования внешних библиотек. Сейчас они просто скопированы в /export/libs/
-
-Иконки кластеризуются или слишком близко или при нажатии масштабируются плохо
 
 При отдалении активная иконка склеивается в кластер и исчезает. Возможно стоит при выделении иконку прятать и вставлять на её место новую, активную
